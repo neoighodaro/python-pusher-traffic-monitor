@@ -2,9 +2,6 @@
 
 This is a demo application showing how to build a realtime website traffic monitor using [Python](https://www.python.org/) and [Pusher](https://pusher.com/). You can read about how it was created on [Pusher's blog](https://blog.pusher.com/author/neo/).
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
 
@@ -18,26 +15,27 @@ What things you need to install the software.
 
 Clone the git repository on your computer
 
-``` $ git clone https://github.com/neoighodaro-articles/...```
+```
+$ git clone https://github.com/neoighodaro/python-pusher-traffic-monitor
+```
 
-You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
+You can also download the entire repository as a zip file and unpack in on your computer if you do not have git.
 
 After cloning the application, you need to install it's dependencies.
 
-``` $ cd ...```
+```
+$ cd path/to/project
+$ python3 -m venv .venv # activate virtual environment (you can use the other command too)
+$ source .venv/bin/activate # windows has their own method
+$ python dbsetup.py
+$ pip install flask
+$ pip install httpagentparser
+$ pip install pusher
+$ export FLASK_ENVIRONMENT=development # not necessary
+$ flask run
+```
 
-``` $ sudo pip install flask, pusher, httpagentparser```
-
-## Setup
-
-* Setup the database for the application
-``` $ python dbsetup.py```
-* To set the application in development environment, run the following code
-``` $ export FLASK_ENV=development```
-
-## Run the application
- 
-``` $ flask run```
+You should see the application in action.
 
 ## Built With
 
